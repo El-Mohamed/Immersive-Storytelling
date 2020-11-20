@@ -1140,6 +1140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Adult 1 - Ch31_nonPBR
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: bfa3dac63c5667a458f12d9e87f18a19, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: bfa3dac63c5667a458f12d9e87f18a19, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfa3dac63c5667a458f12d9e87f18a19, type: 3}
 --- !u!1 &1764841492
