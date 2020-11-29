@@ -414,6 +414,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dc6f8849f906f034f9523a0dd1032253, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dc6f8849f906f034f9523a0dd1032253, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: dc6f8849f906f034f9523a0dd1032253, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dc6f8849f906f034f9523a0dd1032253, type: 3}
       propertyPath: m_Name
       value: Teenager 2 - Ch37_nonPBR
@@ -1285,6 +1297,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 43afd622a8743b747942d535bfd616e2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 43afd622a8743b747942d535bfd616e2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 43afd622a8743b747942d535bfd616e2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 43afd622a8743b747942d535bfd616e2, type: 3}
       propertyPath: m_Name
       value: Cop - Douglas
@@ -1349,6 +1373,18 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 64b11cf5a7722f74eb19e6449ae16864, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 64b11cf5a7722f74eb19e6449ae16864, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 64b11cf5a7722f74eb19e6449ae16864, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 64b11cf5a7722f74eb19e6449ae16864, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 64b11cf5a7722f74eb19e6449ae16864, type: 3}
       propertyPath: m_Name
@@ -1472,6 +1508,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 790de9869aa9b6d4a98d01d3dc65d397, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 790de9869aa9b6d4a98d01d3dc65d397, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 790de9869aa9b6d4a98d01d3dc65d397, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 790de9869aa9b6d4a98d01d3dc65d397, type: 3}
       propertyPath: m_Name
       value: Teeager 1 - Ch02_nonPBR
@@ -1532,6 +1580,18 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: bfa3dac63c5667a458f12d9e87f18a19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfa3dac63c5667a458f12d9e87f18a19, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfa3dac63c5667a458f12d9e87f18a19, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bfa3dac63c5667a458f12d9e87f18a19, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: bfa3dac63c5667a458f12d9e87f18a19, type: 3}
       propertyPath: m_Name
