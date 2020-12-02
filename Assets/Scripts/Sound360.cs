@@ -9,6 +9,8 @@ public class Sound360 : MonoBehaviour
     public AudioSource leftAudioSource;
     public AudioSource rightAudioSource;
 
+    private List<AudioSource> allAudioSources;
+
     private const int FrontAngle = 0;
     private const int RightAngle = 90;
     private const int BackAngle = 180;
@@ -18,59 +20,67 @@ public class Sound360 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        frontAudioSource.Play();
-        backAudioSource.Play();
-        leftAudioSource.Play();
-        rightAudioSource.Play();
+        allAudioSources = new List<AudioSource>();
+        allAudioSources.Add(frontAudioSource);
+        allAudioSources.Add(rightAudioSource);
+        allAudioSources.Add(backAudioSource);
+        allAudioSources.Add(leftAudioSource);
+        StartAllSounds();
+    }
+
+    private void StartAllSounds()
+    {
+        foreach (var audioSource in allAudioSources)
+        {
+            audioSource.Play();
+        }
+    }
+
+    private void MuteAllSoundsExpect(int index)
+    {
+        for (int i = 0; i < allAudioSources.Count; i++)
+        {
+            if (i != index)
+                allAudioSources[i].volume = 0.05f;
+            else
+            {
+                allAudioSources[i].volume = 1f;
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        var currentYAngle = gameObject.transform.rotation.eulerAngles.y;
 
-        var angle = gameObject.transform.rotation.eulerAngles.y;
-
-        if ((angle < 45 && angle > 0) || (angle > 315 && angle < 360)) {
-            Debug.Log("Voorkant" + angle);
-            frontAudioSource.volume = 1f;
-            backAudioSource.volume = 0f;
-            leftAudioSource.volume = 0f;
-            rightAudioSource.volume = 0f;
-        }
-
-
-        if ((angle < 135 && angle > 45))
+        if ((currentYAngle < 45 && currentYAngle >= 0) || (currentYAngle > 315 && currentYAngle < 360))
         {
-            Debug.Log("Rechts" + angle);
-            frontAudioSource.volume = 0f;
-            backAudioSource.volume = 0f;
-            leftAudioSource.volume = 0f;
-            rightAudioSource.volume = 1f;
+            Debug.Log("Voorkant" + currentYAngle);
+            MuteAllSoundsExpect(0);
         }
 
-        if ((angle < 225 && angle > 135))
+
+        if ((currentYAngle < 135 && currentYAngle > 45))
         {
-            frontAudioSource.volume = 0f;
-            backAudioSource.volume = 1f;
-            leftAudioSource.volume = 0f;
-            rightAudioSource.volume = 0f;
-            Debug.Log("Achter" + angle);
-        }
-      
+            Debug.Log("Rechts" + currentYAngle);
+            MuteAllSoundsExpect(1);
 
-        if ((angle < 315 && angle > 225))
+        }
+
+        if ((currentYAngle < 225 && currentYAngle > 135))
         {
-            frontAudioSource.volume = 0f;
-            backAudioSource.volume = 0f;
-            leftAudioSource.volume = 1f;
-            rightAudioSource.volume = 0f;
-            Debug.Log("Links" + angle);
+            Debug.Log("Achter" + currentYAngle);
+
+            MuteAllSoundsExpect(2);
         }
 
+        if ((currentYAngle < 315 && currentYAngle > 225))
+        {
+            Debug.Log("Links" + currentYAngle);
+            MuteAllSoundsExpect(3);
+        }
 
-
-
-        //Debug.Log(gameObject.transform.rotation.eulerAngles.y);
     }
 
 
