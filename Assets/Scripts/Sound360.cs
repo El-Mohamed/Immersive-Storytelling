@@ -8,14 +8,17 @@ public class Sound360 : MonoBehaviour
     public AudioSource backAudioSource;
     public AudioSource leftAudioSource;
     public AudioSource rightAudioSource;
+    public AudioClip audioClip;
 
     private List<AudioSource> allAudioSources;
+
 
     private const int FrontAngle = 0;
     private const int RightAngle = 90;
     private const int BackAngle = 180;
     private const int LeftAngle = 270;
 
+    private int lastPlayed = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -41,10 +44,13 @@ public class Sound360 : MonoBehaviour
         for (int i = 0; i < allAudioSources.Count; i++)
         {
             if (i != index)
+            {
                 allAudioSources[i].volume = 0.05f;
+            }
             else
             {
                 allAudioSources[i].volume = 1f;
+                //allAudioSources[i].Play(audioClip);
             }
         }
     }
