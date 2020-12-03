@@ -12,6 +12,9 @@ public class Waypoints : MonoBehaviour
     Animator animator;
     int lastcurrent;
 
+    bool unlocked = false;
+
+
     public float damping;
 
     private void Start()
@@ -23,9 +26,12 @@ public class Waypoints : MonoBehaviour
     {
         if (Vector3.Distance(waypoints[current].transform.position, transform.position) < WPradius)
         {
-            //Debug.Log(current);
             animator.SetFloat("Vertical", 0);
             current++;
+            if(current == waypoints.Length && !unlocked)
+            {
+                StartCoroutine(UnlockAnimation());
+            }
             if (current >= waypoints.Length)
             {
                 current = waypoints.Length;
@@ -49,8 +55,19 @@ public class Waypoints : MonoBehaviour
 
     }
 
-    void SmoothLook(Vector3 newDirection)
+    //void SmoothLook(Vector3 newDirection)
+    //{
+    //    transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(newDirection), Time.deltaTime);
+    //}
+
+    IEnumerator UnlockAnimation()
     {
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(newDirection), Time.deltaTime);
+        Debug.Log("Coroutine Started");
+        if (unlocked)
+            yield break;
+        animator.SetBool("Unlock", true);
+        unlocked = true;
+        yield return new WaitForSeconds(4.5f);
+        animator.SetBool("Unlock", false);
     }
 }
