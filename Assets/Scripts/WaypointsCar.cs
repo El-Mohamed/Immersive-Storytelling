@@ -8,6 +8,8 @@ public class WaypointsCar : MonoBehaviour
 
     public GameObject Cop;
     public GameObject[] CopWaypoints;
+    public GameObject Cell;
+
     int current = 0;
     float rotSpeed;
     public float speed;
@@ -75,5 +77,6 @@ public class WaypointsCar : MonoBehaviour
         pos.z -= 1.2f;
         CopInstantiate.gameObject.transform.position = pos;
         CopInstantiate.GetComponent<Waypoints>().waypoints = CopWaypoints;
+        CopInstantiate.GetComponent<Waypoints>().Cell = Cell;
     }
 }

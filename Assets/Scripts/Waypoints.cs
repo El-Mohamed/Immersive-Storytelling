@@ -17,6 +17,8 @@ public class Waypoints : MonoBehaviour
 
     bool unlocked = false;
 
+    bool cellUnlocked = false;
+
 
     public float damping;
 
@@ -73,7 +75,19 @@ public class Waypoints : MonoBehaviour
         animator.SetBool("Unlock", true);
         CellAnimation.SetBool("UnlockCell", true);
         unlocked = true;
+        StartCoroutine(UnlockCellAnim());
         yield return new WaitForSeconds(4.5f);
         animator.SetBool("Unlock", false);
+    }
+
+
+    IEnumerator UnlockCellAnim()
+    {
+        if (cellUnlocked)
+            yield break;
+        cellUnlocked = true;
+        yield return new WaitForSeconds(2f);
+        CellAnimation.SetTrigger("OpenClose");
+        //animator.SetBool("Unlock", false);
     }
 }

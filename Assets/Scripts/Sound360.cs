@@ -62,28 +62,28 @@ public class Sound360 : MonoBehaviour
 
         if ((currentYAngle < 45 && currentYAngle >= 0) || (currentYAngle > 315 && currentYAngle < 360))
         {
-            Debug.Log("Voorkant" + currentYAngle);
+            //Debug.Log("Voorkant" + currentYAngle);
             MuteAllSoundsExpect(0);
         }
 
 
         if ((currentYAngle < 135 && currentYAngle > 45))
         {
-            Debug.Log("Rechts" + currentYAngle);
+            //Debug.Log("Rechts" + currentYAngle);
             MuteAllSoundsExpect(1);
 
         }
 
         if ((currentYAngle < 225 && currentYAngle > 135))
         {
-            Debug.Log("Achter" + currentYAngle);
+            //Debug.Log("Achter" + currentYAngle);
 
             MuteAllSoundsExpect(2);
         }
 
         if ((currentYAngle < 315 && currentYAngle > 225))
         {
-            Debug.Log("Links" + currentYAngle);
+            //Debug.Log("Links" + currentYAngle);
             MuteAllSoundsExpect(3);
         }
 
