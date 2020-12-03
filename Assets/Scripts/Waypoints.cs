@@ -12,6 +12,9 @@ public class Waypoints : MonoBehaviour
     Animator animator;
     int lastcurrent;
 
+    public GameObject Cell;
+    Animator CellAnimation;
+
     bool unlocked = false;
 
 
@@ -20,6 +23,8 @@ public class Waypoints : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+
+        CellAnimation = Cell.GetComponent<Animator>();
     }
 
     void Update()
@@ -66,6 +71,7 @@ public class Waypoints : MonoBehaviour
         if (unlocked)
             yield break;
         animator.SetBool("Unlock", true);
+        CellAnimation.SetBool("UnlockCell", true);
         unlocked = true;
         yield return new WaitForSeconds(4.5f);
         animator.SetBool("Unlock", false);
