@@ -8,7 +8,7 @@ public class Sound360 : MonoBehaviour
     public AudioSource backAudioSource;
     public AudioSource leftAudioSource;
     public AudioSource rightAudioSource;
-    public AudioClip audioClip;
+    //public AudioClip audioClip;
 
     private List<AudioSource> allAudioSources;
 
