@@ -26,7 +26,9 @@ public class WaypointsCar : MonoBehaviour
 
     void Update()
     {
-        if (Vector3.Distance(waypoints[current].transform.position, transform.position) < 6)
+
+   
+        if (Vector3.Distance(waypoints[waypoints.Length-1].transform.position, transform.position) < 6)
         {
             if (speed != 1f)
             {
@@ -37,8 +39,16 @@ public class WaypointsCar : MonoBehaviour
                 speed = 1f;
             }
         }
+        //else
+        //{
+        //    speed = 5f;
+        //}
+        //if (Vector3.Distance(waypoints[0].transform.position, transform.position) < 3)
+        //{
+        //    speed = 4f;
+        //}
 
-            if (Vector3.Distance(waypoints[current].transform.position, transform.position) < WPradius)
+        if (Vector3.Distance(waypoints[current].transform.position, transform.position) < WPradius)
             {
             current++;
             if (current == waypoints.Length && !copSpawned)
