@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: rp_sophia_rigged_003_mat
   m_Shader: {fileID: 4800000, guid: 498d301031d43744d90613877569d9bc, type: 3}
   m_ShaderKeywords: _AODIFFUSETOGGLE_ON
@@ -39,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AODiffuseBlend: 1
+    - _AODiffuseBlend: 0
     - _AODiffuseToggle: 1
     - _Color1Multiply: 1
     - _Color1Power: 1
@@ -52,13 +53,14 @@ Material:
     - _GlossHighpassOffset: 9
     - _GlossHighpassRange: 0.5
     - _GlossHighpassStrength: 7
-    - _GlossMultiply: 0
+    - _GlossMultiply: 1
     - _MaskColorizeToggle: 0
-    - _NormalStrength: 1
-    - _SSSBlend: 0.45
+    - _NormalStrength: 1.2
+    - _SSSBlend: 0.529
     - _SSSToggle: 0
     - __dirty: 1
     m_Colors:
     - _Color1: {r: 0, g: 0, b: 0, a: 0}
     - _Color2: {r: 0, g: 0, b: 0, a: 0}
     - _SSSColor: {r: 0.7176471, g: 0.6627451, b: 0.5607843, a: 0}
+  m_BuildTextureStacks: []
