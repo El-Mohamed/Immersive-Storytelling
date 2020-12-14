@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class NextScene : MonoBehaviour
 
         if (collider.gameObject.tag == "Player")
         {
-            //SceneManager.LoadScene(nextSceneIndex);
+            SceneManager.LoadScene("brightworld");
             Debug.Log("tagged");
         }
     }

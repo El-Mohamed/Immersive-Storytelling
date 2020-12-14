@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Dark Scene-2-versieextre.unity
+    path: Assets/Scenes/Dark Scene-2.unity
     guid: 63e280c68d621d744b3725cab952fe5c
+  - enabled: 1
+    path: Assets/Scenes/brightworld.unity
+    guid: f2b4c4727bd74bf40a1d960230cef00a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: abc8a34d3b3ffb543a3e1b8e9fd12c93, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 24585a17e46f96441be1b7b98364610f, type: 2}
