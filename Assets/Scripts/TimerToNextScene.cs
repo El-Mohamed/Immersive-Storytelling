@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TimerToNextScene : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float TimeLeft = 30;
+    public float TimeLeft = 30;
     void Start()
     {
 
