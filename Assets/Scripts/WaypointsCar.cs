@@ -80,7 +80,7 @@ public class WaypointsCar : MonoBehaviour
         if (copSpawned)
             yield break;
         copSpawned = true;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
         GameObject CopInstantiate = Instantiate(Cop);
         Vector3 pos = transform.position;
         pos.x -= 0.38f;
