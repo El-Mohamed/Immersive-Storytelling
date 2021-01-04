@@ -7,9 +7,12 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class PostProcessingScript : MonoBehaviour
 {
-
+    public bool Reverse = false;
     public PostProcessVolume volume;
     private Vignette _Vin;
+
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +25,17 @@ public class PostProcessingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_Vin.intensity.value >= 0)
-            _Vin.intensity.value = Mathf.Lerp(_Vin.intensity.value, -3, 0.04f * Time.deltaTime);
+        if (!Reverse)
+        {
+            if (_Vin.intensity.value >= 0)
+                _Vin.intensity.value = Mathf.Lerp(_Vin.intensity.value, -3, 0.04f * Time.deltaTime);
+        }
+
+        if (Reverse)
+        {
+            _Vin.intensity.value = Mathf.Lerp(_Vin.intensity.value, 4, 0.04f * Time.deltaTime);
+        }
+
 
     }
 }

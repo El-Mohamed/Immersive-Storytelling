@@ -16,7 +16,7 @@ public class StopAudio : MonoBehaviour
         g.volume = 1;
         //g.volume = (float)0.0;
 
-        
+
     }
 
     // Update is called once per frame
@@ -27,11 +27,11 @@ public class StopAudio : MonoBehaviour
         //foreach (GameObject g in)
         //{
         Cop = GameObject.FindGameObjectsWithTag("Cop");
-        foreach(var cop in Cop)
+        foreach (var cop in Cop)
         {
             if (Vector3.Distance(cop.transform.position, transform.position) <= range)
             {
-                Debug.Log(Vector3.Distance(cop.transform.position, transform.position));
+                //Debug.Log(Vector3.Distance(cop.transform.position, transform.position));
                 g.Stop();
                 //g.volume = (float)0.0;
 
