@@ -5,10 +5,10 @@ using UnityEditor;
 [CustomEditor(typeof(MovePath))]
 public class MovePathEditor : Editor {
 
-    public override void OnInspectorGUI()
-    {
+    //public override void OnInspectorGUI()
+    //{
 
-    }
+    //}
 /*
 	public void OnSceneGUI()
 	{
