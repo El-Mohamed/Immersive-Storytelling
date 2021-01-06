@@ -6,6 +6,8 @@ public class WaypointsCar : MonoBehaviour
 {
     public GameObject[] waypoints;
 
+    public float Drivetiming = 30;
+
     public GameObject Cop;
     public GameObject[] CopWaypoints;
     public GameObject Cell;
@@ -17,8 +19,8 @@ public class WaypointsCar : MonoBehaviour
     Animator animator;
     int lastcurrent;
     public float damping;
-
     bool copSpawned = false;
+
 
     private void Start()
     {
@@ -26,8 +28,10 @@ public class WaypointsCar : MonoBehaviour
 
     void Update()
     {
+        Drivetiming -= Time.deltaTime;
 
-   
+        if (Drivetiming < 0)
+        {
         if (Vector3.Distance(waypoints[waypoints.Length-1].transform.position, transform.position) < 6)
         {
             if (speed != 1f)
@@ -72,6 +76,7 @@ public class WaypointsCar : MonoBehaviour
             current -= 1;
         }
         transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
+        }
     }
 
     IEnumerator SpawnCop()
