@@ -19,6 +19,8 @@ public class Waypoints : MonoBehaviour
 
     bool cellUnlocked = false;
 
+    bool geluid = false;
+
 
     public float damping;
 
@@ -27,6 +29,8 @@ public class Waypoints : MonoBehaviour
         animator = GetComponent<Animator>();
 
         CellAnimation = Cell.GetComponent<Animator>();
+
+        
     }
 
     void Update()
