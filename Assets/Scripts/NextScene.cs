@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NextScene : MonoBehaviour
 {
     public GameObject _gameObject;
     public float TimeLeft = 5;
     public bool timer = false;
+    public Image _Image;
 
     void OnTriggerEnter(Collider collider)
     {
@@ -30,15 +32,14 @@ public class NextScene : MonoBehaviour
             TimeLeft -= Time.deltaTime;
             if (TimeLeft < 0 && TimeLeft > -7.9999999999999999999f)
             {
-
-                _gameObject.GetComponent<Blink>().bottom.GetComponent<Renderer>().enabled = true;
-                _gameObject.GetComponent<Blink>().Top.GetComponent<Renderer>().enabled = true;
+                var image = this._Image.GetComponent<Image>();
+                var temp = image.color;
+                temp.a += 0.0024f;
+                image.color = temp;
             }
             else if (TimeLeft < -8)
             {
                 SceneManager.LoadScene("brightworld");
-                _gameObject.GetComponent<Blink>().bottom.GetComponent<Renderer>().enabled = true;
-                _gameObject.GetComponent<Blink>().Top.GetComponent<Renderer>().enabled = true;
             }
         }
 
