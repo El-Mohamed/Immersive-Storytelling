@@ -76,11 +76,13 @@ public class Waypoints : MonoBehaviour
         Debug.Log("Coroutine Started");
         if (unlocked)
             yield break;
+        
         animator.SetBool("Unlock", true);
         CellAnimation.SetBool("UnlockCell", true);
         unlocked = true;
         StartCoroutine(UnlockCellAnim());
         yield return new WaitForSeconds(4.5f);
+        
         animator.SetBool("Unlock", false);
     }
 
@@ -91,6 +93,7 @@ public class Waypoints : MonoBehaviour
             yield break;
         cellUnlocked = true;
         yield return new WaitForSeconds(2f);
+        Cell.GetComponent<AudioSource>().Play();
         CellAnimation.SetTrigger("OpenClose");
         //animator.SetBool("Unlock", false);
     }
